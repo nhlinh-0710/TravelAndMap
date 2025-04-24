@@ -143,9 +143,9 @@ public class Explore extends javax.swing.JFrame {
 
         btn_explore.setBackground(new java.awt.Color(0, 0, 0));
         btn_explore.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btn_explore.setForeground(new java.awt.Color(255, 255, 255));
+        btn_explore.setForeground(new java.awt.Color(255, 102, 51));
         btn_explore.setText("Explore");
-        btn_explore.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        btn_explore.setBorder(null);
         btn_explore.setContentAreaFilled(false);
         btn_explore.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -407,6 +407,9 @@ public class Explore extends javax.swing.JFrame {
 
     private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
         // TODO add your handling code here:
+        Home dk = new Home();
+        dk.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btn_homeActionPerformed
 
     public static void main(String args[]) {

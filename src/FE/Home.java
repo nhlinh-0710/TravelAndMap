@@ -28,25 +28,573 @@ public class Home extends javax.swing.JFrame {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
+        Ten_Logo = new javax.swing.JLabel();
+        btn_language = new javax.swing.JButton();
+        btn_aboutUs = new javax.swing.JButton();
+        btn_contact1 = new javax.swing.JButton();
+        btn_explore = new javax.swing.JButton();
+        btn_SignUp1 = new javax.swing.JButton();
+        btn_LogIn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel4 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        btn_chuyenTrang1 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        btn_chuyenTrang3 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        btn_chuyenTrang4 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        btn_chuyenTrang = new javax.swing.JButton();
+        btn_home1 = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
+        jButton8 = new javax.swing.JButton();
+        jPanel11 = new javax.swing.JPanel();
+        jButton9 = new javax.swing.JButton();
+        jPanel12 = new javax.swing.JPanel();
+        jButton7 = new javax.swing.JButton();
+        jPanel13 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jPanel14 = new javax.swing.JPanel();
+        jButton10 = new javax.swing.JButton();
+        jPanel15 = new javax.swing.JPanel();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1300, 700));
 
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(1300, 1000));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1300, 5000));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1300, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-        );
+        Ten_Logo.setFont(new java.awt.Font("Segoe UI", 1, 35)); // NOI18N
+        Ten_Logo.setText("Travel and Map");
+        jPanel2.add(Ten_Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 40, -1, 50));
+
+        btn_language.setBackground(new java.awt.Color(0, 102, 102));
+        btn_language.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_language.setForeground(new java.awt.Color(255, 255, 255));
+        btn_language.setText("Language");
+        btn_language.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_language.setBorderPainted(false);
+        btn_language.setContentAreaFilled(false);
+        btn_language.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_languageActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_language, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 58, -1, -1));
+
+        btn_aboutUs.setBackground(new java.awt.Color(0, 102, 102));
+        btn_aboutUs.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_aboutUs.setForeground(new java.awt.Color(255, 255, 255));
+        btn_aboutUs.setText("About Us");
+        btn_aboutUs.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_aboutUs.setBorderPainted(false);
+        btn_aboutUs.setContentAreaFilled(false);
+        btn_aboutUs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_aboutUsActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_aboutUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(658, 38, -1, 70));
+
+        btn_contact1.setBackground(new java.awt.Color(0, 102, 102));
+        btn_contact1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_contact1.setForeground(new java.awt.Color(255, 255, 255));
+        btn_contact1.setText("Contact");
+        btn_contact1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_contact1.setBorderPainted(false);
+        btn_contact1.setContentAreaFilled(false);
+        btn_contact1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_contact1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_contact1, new org.netbeans.lib.awtextra.AbsoluteConstraints(762, 37, -1, 71));
+
+        btn_explore.setBackground(new java.awt.Color(0, 0, 0));
+        btn_explore.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_explore.setForeground(new java.awt.Color(255, 255, 255));
+        btn_explore.setText("Explore");
+        btn_explore.setBorder(null);
+        btn_explore.setContentAreaFilled(false);
+        btn_explore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_exploreActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_explore, new org.netbeans.lib.awtextra.AbsoluteConstraints(852, 38, 97, 70));
+
+        btn_SignUp1.setBackground(new java.awt.Color(0, 102, 102));
+        btn_SignUp1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_SignUp1.setForeground(new java.awt.Color(255, 255, 255));
+        btn_SignUp1.setText("Sign Up");
+        btn_SignUp1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_SignUp1.setBorderPainted(false);
+        btn_SignUp1.setContentAreaFilled(false);
+        btn_SignUp1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_SignUp1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_SignUp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1051, 37, -1, 73));
+
+        btn_LogIn.setBackground(new java.awt.Color(0, 102, 102));
+        btn_LogIn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_LogIn.setForeground(new java.awt.Color(255, 255, 255));
+        btn_LogIn.setText("Log in");
+        btn_LogIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_LogIn.setBorderPainted(false);
+        btn_LogIn.setContentAreaFilled(false);
+        btn_LogIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_LogInActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_LogIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1135, 37, -1, 73));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Choose a Country For Your ");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 183, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Next Adventure ?");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(459, 253, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("From local escapes to far-flung adventures");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 335, -1, -1));
+        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(451, 379, 360, 50));
+
+        jToggleButton1.setBackground(new java.awt.Color(255, 153, 51));
+        jToggleButton1.setText("Sreach");
+        jPanel2.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(817, 379, -1, 50));
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Or browse the selected type");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 452, -1, -1));
+
+        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setText("Culture");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 480, -1, -1));
+
+        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton2.setText("Food");
+        jPanel2.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(591, 480, -1, -1));
+
+        jRadioButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton3.setText("Nature");
+        jPanel2.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(688, 480, -1, -1));
+
+        jRadioButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton4.setText("Adventure");
+        jPanel2.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(793, 480, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setText("Best of");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 548, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setText("New York");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 548, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Molokini_NewYork.png"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 296, 200));
+
+        jLabel8.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel8.setText("New York, USA");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 86, -1));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel9.setText("Molokini and Turtle Town");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 170, 10));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel10.setText("Snorkeling Adventure Aboard");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+
+        jLabel11.setText("4 days");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 43, -1));
+
+        jLabel18.setText("From $250");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 60, -1));
+
+        btn_chuyenTrang1.setBackground(new java.awt.Color(0, 102, 102));
+        btn_chuyenTrang1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_chuyenTrang1.setForeground(new java.awt.Color(255, 102, 0));
+        btn_chuyenTrang1.setText("👁️‍");
+        btn_chuyenTrang1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_chuyenTrang1.setBorderPainted(false);
+        btn_chuyenTrang1.setContentAreaFilled(false);
+        btn_chuyenTrang1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_chuyenTrang1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_chuyenTrang1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 40, 30));
+
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 580, 200, 300));
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Inclusive Ultimate Circle Island.png"))); // NOI18N
+        jLabel13.setText("jLabel13");
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 200));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel14.setText("New York, USA");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 78, -1));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel15.setText("All Inclusive Ultimate Circle");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, 10));
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel16.setText("Island Day hTour with Lunch");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+
+        jLabel17.setText("4 days");
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 43, -1));
+
+        jLabel24.setText("From $771");
+        jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
+
+        btn_chuyenTrang3.setBackground(new java.awt.Color(0, 102, 102));
+        btn_chuyenTrang3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_chuyenTrang3.setForeground(new java.awt.Color(255, 102, 0));
+        btn_chuyenTrang3.setText("👁");
+        btn_chuyenTrang3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_chuyenTrang3.setBorderPainted(false);
+        btn_chuyenTrang3.setContentAreaFilled(false);
+        btn_chuyenTrang3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_chuyenTrang3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btn_chuyenTrang3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 40, 30));
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 580, 200, 300));
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Kayak Tour.png"))); // NOI18N
+        jLabel19.setText("jLabel19");
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 199));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel20.setText("New York, USA");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 95, 10));
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel21.setText("Clear Kayak Tour of Shell Key");
+        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 226, 163, 10));
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel22.setText("Preserve and Tampa Bay Area");
+        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, 10));
+
+        jLabel23.setText("4 days");
+        jPanel4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 43, -1));
+
+        jLabel12.setText("From $225");
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
+
+        btn_chuyenTrang4.setBackground(new java.awt.Color(0, 102, 102));
+        btn_chuyenTrang4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_chuyenTrang4.setForeground(new java.awt.Color(255, 102, 0));
+        btn_chuyenTrang4.setText("👁");
+        btn_chuyenTrang4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_chuyenTrang4.setBorderPainted(false);
+        btn_chuyenTrang4.setContentAreaFilled(false);
+        btn_chuyenTrang4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_chuyenTrang4ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btn_chuyenTrang4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 40, 30));
+
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 580, 200, 300));
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel27.setText("New York, USA");
+        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 79, 10));
+
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel25.setText("Mauna Kea Summit Sunset and");
+        jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 180, -1));
+
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel28.setText("Kona Waikoloa Pick Up");
+        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 150, 10));
+
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel29.setText("Stars Free Astro Photos Hilo ");
+        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 236, 180, 10));
+
+        jLabel30.setText("4 days");
+        jPanel5.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+
+        jLabel31.setText("From $711");
+        jPanel5.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 60, -1));
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Mauna Kea.png"))); // NOI18N
+        jLabel32.setText("jLabel32");
+        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 200));
+
+        btn_chuyenTrang.setBackground(new java.awt.Color(0, 102, 102));
+        btn_chuyenTrang.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_chuyenTrang.setForeground(new java.awt.Color(255, 102, 0));
+        btn_chuyenTrang.setText("👁");
+        btn_chuyenTrang.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_chuyenTrang.setBorderPainted(false);
+        btn_chuyenTrang.setContentAreaFilled(false);
+        btn_chuyenTrang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_chuyenTrangActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btn_chuyenTrang, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 40, 30));
+
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 580, 200, 300));
+
+        btn_home1.setBackground(new java.awt.Color(0, 102, 102));
+        btn_home1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_home1.setForeground(new java.awt.Color(255, 102, 0));
+        btn_home1.setText("Home");
+        btn_home1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_home1.setBorderPainted(false);
+        btn_home1.setContentAreaFilled(false);
+        btn_home1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_home1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(477, 37, -1, 71));
+
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setText("See activities");
+        jPanel6.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 130, 40));
+
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("Enjoy these cool staycation promotions.");
+        jPanel6.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText("Best staycation deals");
+        jPanel6.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot 2025-04-23 202454.png"))); // NOI18N
+        jLabel39.setText("jLabel39");
+        jPanel6.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 250));
+
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 1030, 300, 250));
+        jPanel6.getAccessibleContext().setAccessibleDescription("");
+
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton2.setText("See activities");
+        jPanel7.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 130, 40));
+
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setText("Don't forget to check out these activities");
+        jPanel7.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabel35.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel35.setText("All Time");
+        jPanel7.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 120, -1));
+
+        jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 19)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setText("Favourite Activities in VietNam");
+        jPanel7.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot 2025-04-23 202503.png"))); // NOI18N
+        jLabel40.setText("jLabel40");
+        jPanel7.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 250));
+
+        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 1030, 300, 250));
+
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton3.setText("See activities");
+        jPanel8.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 130, 40));
+
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setText("80% Discount");
+        jPanel8.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel38.setText("Discover the wow of Europe");
+        jPanel8.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot 2025-04-23 202510.png"))); // NOI18N
+        jLabel41.setText("jLabel41");
+        jPanel8.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 250));
+
+        jPanel2.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 1030, 300, 250));
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Background_Home.png"))); // NOI18N
+        jLabel42.setText("jLabel42");
+        jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 530));
+
+        jPanel9.setBackground(new java.awt.Color(254, 247, 244));
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel43.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel43.setText("Popular things to do");
+        jPanel9.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+
+        jButton4.setText("See All");
+        jPanel9.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 250, 40));
+
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel10.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 70));
+
+        jPanel9.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, 130, 160));
+
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel11.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 70));
+
+        jPanel9.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 130, 160));
+
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel12.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 70));
+
+        jPanel9.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 80, 130, 160));
+
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel13.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 70));
+
+        jPanel9.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 80, 130, 160));
+
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 70));
+
+        jPanel9.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 130, 160));
+
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton6.setBackground(new java.awt.Color(254, 247, 244));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/food.png"))); // NOI18N
+        jButton6.setBorderPainted(false);
+        jButton6.setContentAreaFilled(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 80, 80));
+
+        jPanel9.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 260, 130, 160));
+
+        jPanel2.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1390, 1300, 500));
 
         jScrollPane2.setViewportView(jPanel2);
 
@@ -60,16 +608,82 @@ public class Home extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1008, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+                    .addGap(0, 0, 0)))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void btn_LogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogInActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_LogInActionPerformed
+
+    private void btn_SignUp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SignUp1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_SignUp1ActionPerformed
+
+    private void btn_exploreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exploreActionPerformed
+ 
+        Explore dk = new Explore();
+                
+        dk.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btn_exploreActionPerformed
+
+    private void btn_contact1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contact1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_contact1ActionPerformed
+
+    private void btn_aboutUsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aboutUsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_aboutUsActionPerformed
+
+    private void btn_languageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_languageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_languageActionPerformed
+
+    private void btn_chuyenTrangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_chuyenTrangActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btn_chuyenTrangActionPerformed
+
+    private void btn_home1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_home1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_home1ActionPerformed
+
+    private void btn_chuyenTrang1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_chuyenTrang1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_chuyenTrang1ActionPerformed
+
+    private void btn_chuyenTrang3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_chuyenTrang3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_chuyenTrang3ActionPerformed
+
+    private void btn_chuyenTrang4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_chuyenTrang4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_chuyenTrang4ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -107,7 +721,92 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Ten_Logo;
+    private javax.swing.JButton btn_LogIn;
+    private javax.swing.JButton btn_SignUp1;
+    private javax.swing.JButton btn_aboutUs;
+    private javax.swing.JButton btn_chuyenTrang;
+    private javax.swing.JButton btn_chuyenTrang1;
+    private javax.swing.JButton btn_chuyenTrang3;
+    private javax.swing.JButton btn_chuyenTrang4;
+    private javax.swing.JButton btn_contact1;
+    private javax.swing.JButton btn_explore;
+    private javax.swing.JButton btn_home1;
+    private javax.swing.JButton btn_language;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
