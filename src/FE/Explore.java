@@ -12,8 +12,8 @@ public class Explore extends javax.swing.JFrame {
 
     public Explore() {
         initComponents();
-        jPopupMenu1.add(jPanel1);
-        jList1.setModel(mod);
+        jPopupMenu1.add(Panel_ChuaThongTinSearch);
+        List_ThongTinSearch.setModel(mod);
     }
 
     @SuppressWarnings("unchecked")
@@ -21,9 +21,9 @@ public class Explore extends javax.swing.JFrame {
     private void initComponents() {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
-        jPanel1 = new javax.swing.JPanel();
+        Panel_ChuaThongTinSearch = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        List_ThongTinSearch = new javax.swing.JList<>();
         Ten_Logo = new javax.swing.JLabel();
         btn_home = new javax.swing.JButton();
         btn_language = new javax.swing.JButton();
@@ -53,26 +53,26 @@ public class Explore extends javax.swing.JFrame {
 
         jPopupMenu1.setFocusable(false);
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        List_ThongTinSearch.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
+        List_ThongTinSearch.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jList1MouseClicked(evt);
+                List_ThongTinSearchMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(List_ThongTinSearch);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout Panel_ChuaThongTinSearchLayout = new javax.swing.GroupLayout(Panel_ChuaThongTinSearch);
+        Panel_ChuaThongTinSearch.setLayout(Panel_ChuaThongTinSearchLayout);
+        Panel_ChuaThongTinSearchLayout.setHorizontalGroup(
+            Panel_ChuaThongTinSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        Panel_ChuaThongTinSearchLayout.setVerticalGroup(
+            Panel_ChuaThongTinSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
 
@@ -81,7 +81,7 @@ public class Explore extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Ten_Logo.setFont(new java.awt.Font("Segoe UI", 1, 35)); // NOI18N
+        Ten_Logo.setFont(new java.awt.Font("Vivaldi", 1, 35)); // NOI18N
         Ten_Logo.setText("Travel and Map");
         getContentPane().add(Ten_Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, 50));
 
@@ -391,11 +391,11 @@ public class Explore extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_text_nhapThongTinActionPerformed
 
-    private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
+    private void List_ThongTinSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_List_ThongTinSearchMouseClicked
         // TODO add your handling code here:
-        text_nhapThongTin.setText(jList1.getSelectedValue());
+        text_nhapThongTin.setText(List_ThongTinSearch.getSelectedValue());
         jPopupMenu1.setVisible(false);
-    }//GEN-LAST:event_jList1MouseClicked
+    }//GEN-LAST:event_List_ThongTinSearchMouseClicked
 
     private void btn_contact1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contact1ActionPerformed
         // TODO add your handling code here:
@@ -422,6 +422,8 @@ public class Explore extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JList<String> List_ThongTinSearch;
+    private javax.swing.JPanel Panel_ChuaThongTinSearch;
     private javax.swing.JLabel Ten_Logo;
     private javax.swing.JButton btn_LogIn;
     private javax.swing.JButton btn_SignUp1;
@@ -435,8 +437,6 @@ public class Explore extends javax.swing.JFrame {
     private javax.swing.JLabel image_HaNoi;
     private javax.swing.JLabel image_SaiGon;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel khung_DaNang;
