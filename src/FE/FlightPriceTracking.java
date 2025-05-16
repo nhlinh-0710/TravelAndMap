@@ -1,9 +1,17 @@
 package FE;
+
 import com.formdev.flatlaf.FlatLightLaf;
+import java.sql.*;
+import javax.swing.*;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class FlightPriceTracking extends javax.swing.JFrame {
 
     public FlightPriceTracking() {
         initComponents();
+        setTitle("Flight Price Tracking");
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -24,34 +32,39 @@ public class FlightPriceTracking extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
+        btn_SearchFlight = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        text_From = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
+        text_To = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        jDateChooser_DepartureDate = new com.toedter.calendar.JDateChooser();
         jLabel13 = new javax.swing.JLabel();
-        jSpinField1 = new com.toedter.components.JSpinField();
+        jSpinField_NumberOfTickets = new com.toedter.components.JSpinField();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jButton3 = new javax.swing.JButton();
+        jComboBox_SeatClass = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea_ResultsHere = new javax.swing.JTextArea();
+        btn_ComparePrice = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea_ComparisonResults = new javax.swing.JTextArea();
+        btn_ViewHistory = new javax.swing.JButton();
+        btn_ClearHistory = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea_History = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1300, 930));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1300, 1300));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Ten_Logo1.setFont(new java.awt.Font("Vivaldi", 1, 35)); // NOI18N
@@ -150,25 +163,31 @@ public class FlightPriceTracking extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setBackground(new java.awt.Color(248, 102, 65));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot 2025-04-27 202507.png"))); // NOI18N
-        jButton4.setText("     Search Flight ");
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btn_SearchFlight.setBackground(new java.awt.Color(248, 102, 65));
+        btn_SearchFlight.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_SearchFlight.setForeground(new java.awt.Color(255, 255, 255));
+        btn_SearchFlight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot 2025-04-27 202507.png"))); // NOI18N
+        btn_SearchFlight.setText("     Search Flight ");
+        btn_SearchFlight.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_SearchFlight.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_SearchFlight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btn_SearchFlightActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 150, 200, 50));
+        jPanel3.add(btn_SearchFlight, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 150, 200, 50));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(248, 102, 65));
         jLabel4.setText("From");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 50, -1));
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 200, 40));
+
+        text_From.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_FromActionPerformed(evt);
+            }
+        });
+        jPanel3.add(text_From, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 200, 40));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot_2025-04-27_202800-removebg-preview.png"))); // NOI18N
         jButton5.setContentAreaFilled(false);
@@ -178,7 +197,13 @@ public class FlightPriceTracking extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 40, 40));
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 200, 40));
+
+        text_To.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_ToActionPerformed(evt);
+            }
+        });
+        jPanel3.add(text_To, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 200, 40));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(248, 102, 65));
@@ -189,38 +214,28 @@ public class FlightPriceTracking extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(248, 102, 65));
         jLabel6.setText("Departure date");
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-        jPanel3.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 200, 40));
-
-        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(248, 102, 65));
-        jCheckBox1.setText("Round-trip");
-        jPanel3.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 100, -1));
+        jPanel3.add(jDateChooser_DepartureDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 200, 40));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(248, 102, 65));
         jLabel13.setText("Number of tickets");
         jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, -1, -1));
-        jPanel3.add(jSpinField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, 100, 40));
+        jPanel3.add(jSpinField_NumberOfTickets, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, 100, 40));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(248, 102, 65));
         jLabel14.setText("Seat class");
         jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Economy Class", "Business Class", "First Class" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_SeatClass.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Economy Class", "Business Class", "First Class" }));
+        jComboBox_SeatClass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBox_SeatClassActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 200, 40));
+        jPanel3.add(jComboBox_SeatClass, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 200, 40));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, 1000, 220));
-
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("One Way");
-        jButton3.setContentAreaFilled(false);
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot_2025-04-27_084214-removebg-preview.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 362, 270, 90));
@@ -236,16 +251,6 @@ public class FlightPriceTracking extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot_2025-04-27_085147-removebg-preview.png"))); // NOI18N
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, -8, -1, 70));
 
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Muti City");
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, -1, -1));
-
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, 550, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot_2025-04-27_084214-removebg-preview.png"))); // NOI18N
@@ -256,9 +261,53 @@ public class FlightPriceTracking extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(248, 102, 65));
-        jLabel15.setText("Results here: ");
+        jLabel15.setText("Results Here: ");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 670, 170, 40));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 710, 650, 190));
+
+        jTextArea_ResultsHere.setColumns(20);
+        jTextArea_ResultsHere.setRows(5);
+        jScrollPane2.setViewportView(jTextArea_ResultsHere);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 720, 530, 200));
+
+        btn_ComparePrice.setBackground(new java.awt.Color(248, 102, 65));
+        btn_ComparePrice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_ComparePrice.setForeground(new java.awt.Color(255, 255, 255));
+        btn_ComparePrice.setText("Compare Prices");
+        btn_ComparePrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ComparePriceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_ComparePrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 720, 140, 50));
+
+        jTextArea_ComparisonResults.setColumns(20);
+        jTextArea_ComparisonResults.setRows(5);
+        jScrollPane3.setViewportView(jTextArea_ComparisonResults);
+
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 780, 350, 400));
+
+        btn_ViewHistory.setText("View History");
+        btn_ViewHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ViewHistoryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_ViewHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 950, 140, 50));
+
+        btn_ClearHistory.setText("Clear History");
+        btn_ClearHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ClearHistoryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_ClearHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 950, 140, 50));
+
+        jTextArea_History.setColumns(20);
+        jTextArea_History.setRows(5);
+        jScrollPane4.setViewportView(jTextArea_History);
+
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 1010, 530, 210));
 
         jScrollPane1.setViewportView(jPanel1);
 
@@ -308,21 +357,214 @@ public class FlightPriceTracking extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btn_explore1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btn_SearchFlightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SearchFlightActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        String from = text_From.getText().trim();
+        String to = text_To.getText().trim();
+        String seatClass = (String) jComboBox_SeatClass.getSelectedItem();
+        int tickets = jSpinField_NumberOfTickets.getValue();
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        java.util.Date utilDate = jDateChooser_DepartureDate.getDate();
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        if (from.isEmpty() || to.isEmpty() || utilDate == null || tickets <= 0 || seatClass == null) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ thông tin hợp lệ.");
+            return;
+        }
+
+        java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+
+        try {
+            Connection conn = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/travelandmap", "root", "");
+
+            String sql = "SELECT from_city, to_city, airline, departure_date, departure_time, price "
+                    + "FROM tblflightpricetracking "
+                    + "WHERE from_city = ? AND to_city = ? AND departure_date = ? AND seat_class = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, from);
+            ps.setString(2, to);
+            ps.setDate(3, sqlDate);
+            ps.setString(4, seatClass);
+
+            ResultSet rs = ps.executeQuery();
+
+            StringBuilder resultText = new StringBuilder();
+            NumberFormat formatter = NumberFormat.getInstance(new Locale("vi", "VN"));
+            boolean found = false;
+
+            while (rs.next()) {
+                found = true;
+                String fromCity = rs.getString("from_city");
+                String toCity = rs.getString("to_city");
+                String airline = rs.getString("airline");
+                Date depDate = rs.getDate("departure_date");
+                Time depTime = rs.getTime("departure_time");
+                double price = rs.getDouble("price");
+                double total = price * tickets;
+
+                String formattedPrice = formatter.format(total);
+
+                resultText.append("From: ").append(fromCity)
+                        .append("\nTo: ").append(toCity)
+                        .append("\nAirline: ").append(airline)
+                        .append("\nDate: ").append(depDate)
+                        .append("\nTime: ").append(depTime)
+                        .append("\nPrice for ").append(tickets).append(" tickets: ").append(formattedPrice).append(" VND")
+                        .append("\n--------------------------\n");
+            }
+
+            if (!found) {
+                jTextArea_ResultsHere.setText("Không tìm thấy chuyến bay phù hợp.");
+            } else {
+                jTextArea_ResultsHere.setText(resultText.toString());
+            }
+            // Lưu lịch sử vào CSDL
+            try {
+                Connection connHistory = DriverManager.getConnection("jdbc:mysql://localhost:3306/travelandmap", "root", "");
+                String insertSql = "INSERT INTO tbl_historyflightpricetracking (search_type, content) VALUES (?, ?)";
+                PreparedStatement psHistory = connHistory.prepareStatement(insertSql);
+                psHistory.setString(1, "Flight Search");
+                psHistory.setString(2, resultText.toString());
+                psHistory.executeUpdate();
+                connHistory.close();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, "Lỗi khi lưu lịch sử: " + ex.getMessage());
+            }
+            conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Lỗi: " + ex.getMessage());
+        }
+
+    }//GEN-LAST:event_btn_SearchFlightActionPerformed
+
+    private void jComboBox_SeatClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_SeatClassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jComboBox_SeatClassActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void text_FromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_FromActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_FromActionPerformed
+
+    private void text_ToActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_ToActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_ToActionPerformed
+
+    private void btn_ComparePriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ComparePriceActionPerformed
+        // TODO add your handling code here:
+        try {
+            String resultText = jTextArea_ResultsHere.getText();
+            if (resultText.isEmpty() || resultText.contains("Không tìm thấy chuyến bay")) {
+                jTextArea_ComparisonResults.setText("Không có dữ liệu để so sánh.");
+                return;
+            }
+
+            String[] flights = resultText.split("--------------------------");
+            double minPrice = Double.MAX_VALUE;
+            double maxPrice = Double.MIN_VALUE;
+            String minFlight = "";
+            String maxFlight = "";
+
+            for (String flight : flights) {
+                if (flight.trim().isEmpty()) {
+                    continue;
+                }
+
+                // Tìm dòng chứa giá
+                String[] lines = flight.trim().split("\n");
+                for (String line : lines) {
+                    if (line.contains("Price for")) {
+                        String priceStr = line.replaceAll("[^0-9]", ""); // giữ lại chỉ số
+                        if (!priceStr.isEmpty()) {
+                            double price = Double.parseDouble(priceStr);
+                            if (price < minPrice) {
+                                minPrice = price;
+                                minFlight = flight.trim();
+                            }
+                            if (price > maxPrice) {
+                                maxPrice = price;
+                                maxFlight = flight.trim();
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+
+            NumberFormat formatter = NumberFormat.getInstance(new Locale("vi", "VN"));
+            StringBuilder compareResult = new StringBuilder();
+
+            if (minPrice == maxPrice) {
+                compareResult.append("Tất cả các chuyến bay có cùng giá: ").append(formatter.format(minPrice)).append(" VND");
+            } else {
+                compareResult.append("🔽 Chuyến bay rẻ nhất:\n")
+                        .append(minFlight).append("\n\n")
+                        .append("🔼 Chuyến bay đắt nhất:\n")
+                        .append(maxFlight).append("\n\n")
+                        .append("💰 Chênh lệch: ")
+                        .append(formatter.format(maxPrice - minPrice)).append(" VND");
+            }
+
+            jTextArea_ComparisonResults.setText(compareResult.toString());
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Lỗi khi so sánh giá: " + ex.getMessage());
+        }
+
+    }//GEN-LAST:event_btn_ComparePriceActionPerformed
+
+    private void btn_ViewHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ViewHistoryActionPerformed
+        // TODO add your handling code here:
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/travelandmap", "root", "");
+            String sql = "SELECT * FROM tbl_historyflightpricetracking ORDER BY timestamp DESC";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            StringBuilder historyText = new StringBuilder();
+            while (rs.next()) {
+                String type = rs.getString("search_type");
+                String content = rs.getString("content");
+                Timestamp time = rs.getTimestamp("timestamp");
+
+                historyText.append("📅 ").append(time)
+                        .append(" | 🔍 ").append(type)
+                        .append("\n").append(content)
+                        .append("\n--------------------------\n");
+            }
+
+            jTextArea_History.setText(historyText.toString());
+            conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Lỗi khi xem lịch sử: " + ex.getMessage());
+        }
+    }//GEN-LAST:event_btn_ViewHistoryActionPerformed
+
+    private void btn_ClearHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ClearHistoryActionPerformed
+        // TODO add your handling code here:
+        int confirm = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xóa toàn bộ lịch sử không?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+        if (confirm == JOptionPane.YES_OPTION) {
+            try {
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/travelandmap", "root", "");
+                String sql = "DELETE FROM tbl_historyflightpricetracking";
+                PreparedStatement ps = conn.prepareStatement(sql);
+                ps.executeUpdate();
+                jTextArea_History.setText("");
+                conn.close();
+                JOptionPane.showMessageDialog(this, "Đã xóa lịch sử thành công.");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, "Lỗi khi xóa lịch sử: " + ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_btn_ClearHistoryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -346,19 +588,19 @@ public class FlightPriceTracking extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Ten_Logo1;
+    private javax.swing.JButton btn_ClearHistory;
+    private javax.swing.JButton btn_ComparePrice;
+    private javax.swing.JButton btn_SearchFlight;
+    private javax.swing.JButton btn_ViewHistory;
     private javax.swing.JButton btn_aboutUs1;
     private javax.swing.JButton btn_contact2;
     private javax.swing.JButton btn_explore1;
     private javax.swing.JButton btn_home2;
     private javax.swing.JButton btn_language1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JComboBox<String> jComboBox_SeatClass;
+    private com.toedter.calendar.JDateChooser jDateChooser_DepartureDate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -378,9 +620,14 @@ public class FlightPriceTracking extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private com.toedter.components.JSpinField jSpinField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private com.toedter.components.JSpinField jSpinField_NumberOfTickets;
+    private javax.swing.JTextArea jTextArea_ComparisonResults;
+    private javax.swing.JTextArea jTextArea_History;
+    private javax.swing.JTextArea jTextArea_ResultsHere;
+    private javax.swing.JTextField text_From;
+    private javax.swing.JTextField text_To;
     // End of variables declaration//GEN-END:variables
 }

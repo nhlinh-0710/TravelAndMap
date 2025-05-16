@@ -138,7 +138,6 @@ public class SearchResults extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        KhungChuaAnh1.setText("Ảnh 1");
         KhungChuaAnh1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 KhungChuaAnh1MouseClicked(evt);
@@ -260,30 +259,97 @@ public class SearchResults extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    private String national, city, loction_name, category;
+    private String national, city, location_name, category;
+    private Connection connection;
 
-    // Constructor mới nhận đủ 4 tham số
-    public SearchResults(String national, String city, String loction_name, String category) {
+    // Constructor
+    public SearchResults(String national, String city, String location_name, String category) {
         initComponents();
         this.national = national;
         this.city = city;
-        this.loction_name = loction_name;
+        this.location_name = location_name;
         this.category = category;
 
-        showSearchResults();         // Hiển thị chuỗi text tóm tắt
-  
+        connectToDatabase();
+        showSearchResults();
     }
 
-    // Giữ lại default constructor nếu cần
-    // Phương thức show lên text field
+    // Phương thức kết nối với cơ sở dữ liệu
+    private void connectToDatabase() {
+        String url = "jdbc:mysql://localhost:3306/travelandmap"; // Thay bằng tên database của bạn
+        String user = "root"; // Thay bằng tên đăng nhập MySQL
+        String password = ""; // Thay bằng mật khẩu MySQL
+
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+            System.out.println("Kết nối thành công!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Không thể kết nối cơ sở dữ liệu!", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    // Phương thức lấy dữ liệu từ database theo từ khóa
     private void showSearchResults() {
-        // Ví dụ bạn có 1 JTextField tên txt_KetQuaTimKiem
-        txt_KetQuaTimKiem.setText(
-                national + ", "
-                + city + ", "
-                + loction_name + ", "
-                + category
-        );
+        StringBuilder query = new StringBuilder("SELECT * FROM tbldatabase_post WHERE 1=1");
+
+        if (!national.isEmpty()) {
+            query.append(" AND National = ?");
+        }
+        if (!city.isEmpty()) {
+            query.append(" AND City = ?");
+        }
+        if (!location_name.isEmpty()) {
+            query.append(" AND location_name = ?");
+        }
+        if (!category.isEmpty()) {
+            query.append(" AND category = ?");
+        }
+
+        try (PreparedStatement stmt = connection.prepareStatement(query.toString())) {
+            int index = 1;
+
+            if (!national.isEmpty()) {
+                stmt.setString(index++, national);
+            }
+            if (!city.isEmpty()) {
+                stmt.setString(index++, city);
+            }
+            if (!location_name.isEmpty()) {
+                stmt.setString(index++, location_name);
+            }
+            if (!category.isEmpty()) {
+                stmt.setString(index++, category);
+            }
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                text_TenDiaDiem1.setText(rs.getString("location_name"));
+                text_MoTaDiaDiem1.setText(rs.getString("description"));
+                text_GiaTien1.setText(rs.getString("price"));
+                KhungChuaAnh1.setIcon(convertBlobToImage(rs.getBlob("image")));
+            } else {
+                JOptionPane.showMessageDialog(this, "Không tìm thấy kết quả phù hợp!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        txt_KetQuaTimKiem.setText(national + ", " + city + ", " + location_name + ", " + category);
+    }
+
+    // Phương thức chuyển đổi Blob thành ImageIcon
+    private ImageIcon convertBlobToImage(Blob blob) {
+        try {
+            byte[] imageBytes = blob.getBytes(1, (int) blob.length());
+            ImageIcon icon = new ImageIcon(imageBytes);
+            Image scaledImage = icon.getImage().getScaledInstance(300, 250, Image.SCALE_SMOOTH);
+            return new ImageIcon(scaledImage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     private void btn_home1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_home1ActionPerformed
@@ -324,11 +390,11 @@ public class SearchResults extends javax.swing.JFrame {
 
     private void txt_KetQuaTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_KetQuaTimKiemActionPerformed
         // TODO add your handling code here:
-        
+
 
     }//GEN-LAST:event_txt_KetQuaTimKiemActionPerformed
 
-    
+
     private void text_TenDiaDiem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_TenDiaDiem1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_text_TenDiaDiem1ActionPerformed

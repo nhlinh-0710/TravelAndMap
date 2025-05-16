@@ -234,9 +234,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="KhungChuaAnh1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="&#x1ea2;nh 1"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="KhungChuaAnh1MouseClicked"/>
                   </Events>
