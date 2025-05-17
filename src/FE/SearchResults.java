@@ -263,22 +263,29 @@ public class SearchResults extends javax.swing.JFrame {
     private Connection connection;
 
     // Constructor
-    public SearchResults(String national, String city, String location_name, String category) {
+    public SearchResults(String national, String city, String location_name, String category, String inputText) {
         initComponents();
-        this.national = national;
-        this.city = city;
-        this.location_name = location_name;
-        this.category = category;
+       
 
-        connectToDatabase();
-        showSearchResults();
+         parseInputAndSearch(inputText);
     }
+    private void parseInputAndSearch(String inputText) {
+    // Cắt chuỗi input: "VietNam, DaNang, CauRong"
+    String[] parts = inputText.split(",");
+    this.national = parts.length > 0 ? parts[0].trim() : "";
+    this.city = parts.length > 1 ? parts[1].trim() : "";
+    this.location_name = parts.length > 2 ? parts[2].trim() : "";
+    this.category = ""; // Cho phép để trống sở thích
+
+    connectToDatabase();
+    showSearchResults();
+}
 
     // Phương thức kết nối với cơ sở dữ liệu
     private void connectToDatabase() {
-        String url = "jdbc:mysql://localhost:3306/travelandmap"; // Thay bằng tên database của bạn
-        String user = "root"; // Thay bằng tên đăng nhập MySQL
-        String password = ""; // Thay bằng mật khẩu MySQL
+        String url = "jdbc:mysql://localhost:3306/travelandmap";
+        String user = "root";
+        String password = "";
 
         try {
             connection = DriverManager.getConnection(url, user, password);
@@ -293,49 +300,53 @@ public class SearchResults extends javax.swing.JFrame {
     private void showSearchResults() {
         StringBuilder query = new StringBuilder("SELECT * FROM tbldatabase_post WHERE 1=1");
 
-        if (!national.isEmpty()) {
-            query.append(" AND National = ?");
-        }
-        if (!city.isEmpty()) {
-            query.append(" AND City = ?");
-        }
-        if (!location_name.isEmpty()) {
-            query.append(" AND location_name = ?");
-        }
-        if (!category.isEmpty()) {
-            query.append(" AND category = ?");
-        }
+        if (!national.isEmpty()) query.append(" AND LOWER(National) LIKE ?");
+        if (!city.isEmpty()) query.append(" AND LOWER(City) LIKE ?");
+        if (!location_name.isEmpty()) query.append(" AND LOWER(location_name) LIKE ?");
+        if (!category.isEmpty()) query.append(" AND LOWER(category) LIKE ?");
 
         try (PreparedStatement stmt = connection.prepareStatement(query.toString())) {
             int index = 1;
-
-            if (!national.isEmpty()) {
-                stmt.setString(index++, national);
-            }
-            if (!city.isEmpty()) {
-                stmt.setString(index++, city);
-            }
-            if (!location_name.isEmpty()) {
-                stmt.setString(index++, location_name);
-            }
-            if (!category.isEmpty()) {
-                stmt.setString(index++, category);
-            }
+            if (!national.isEmpty()) stmt.setString(index++, "%" + national.toLowerCase() + "%");
+            if (!city.isEmpty()) stmt.setString(index++, "%" + city.toLowerCase() + "%");
+            if (!location_name.isEmpty()) stmt.setString(index++, "%" + location_name.toLowerCase() + "%");
+            if (!category.isEmpty()) stmt.setString(index++, "%" + category.toLowerCase() + "%");
 
             ResultSet rs = stmt.executeQuery();
 
-            if (rs.next()) {
-                text_TenDiaDiem1.setText(rs.getString("location_name"));
-                text_MoTaDiaDiem1.setText(rs.getString("description"));
-                text_GiaTien1.setText(rs.getString("price"));
-                KhungChuaAnh1.setIcon(convertBlobToImage(rs.getBlob("image")));
-            } else {
+            int count = 0;
+            while (rs.next() && count < 3) {
+                switch (count) {
+                    case 0:
+                        text_TenDiaDiem1.setText(rs.getString("location_name"));
+                        text_MoTaDiaDiem1.setText(rs.getString("description"));
+                        text_GiaTien1.setText(rs.getString("price"));
+                        KhungChuaAnh1.setIcon(convertBlobToImage(rs.getBlob("image")));
+                        break;
+                    case 1:
+                        text_TenDiaDiem2.setText(rs.getString("location_name"));
+                        text_MoTaDiaDiem2.setText(rs.getString("description"));
+                        text_GiaTien2.setText(rs.getString("price"));
+                        KhungChuaAnh2.setIcon(convertBlobToImage(rs.getBlob("image")));
+                        break;
+                    case 2:
+                        text_TenDiaDiem3.setText(rs.getString("location_name"));
+                        text_MoTaDiaDiem3.setText(rs.getString("description"));
+                        text_GiaTien3.setText(rs.getString("price"));
+                        KhungChuaAnh3.setIcon(convertBlobToImage(rs.getBlob("image")));
+                        break;
+                }
+                count++;
+            }
+
+            if (count == 0) {
                 JOptionPane.showMessageDialog(this, "Không tìm thấy kết quả phù hợp!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         txt_KetQuaTimKiem.setText(national + ", " + city + ", " + location_name + ", " + category);
     }
 

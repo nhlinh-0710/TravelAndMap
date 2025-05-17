@@ -1,6 +1,8 @@
 package FE;
 
+import Food.Giaodien;
 import com.formdev.flatlaf.FlatLightLaf;
+import findcompanios.giaodien;
 import java.sql.*;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
@@ -33,8 +35,7 @@ public class Home extends javax.swing.JFrame {
         btn_aboutUs = new javax.swing.JButton();
         btn_contact1 = new javax.swing.JButton();
         btn_explore = new javax.swing.JButton();
-        btn_SignUp1 = new javax.swing.JButton();
-        btn_LogIn = new javax.swing.JButton();
+        btn_Out = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Text_NhapThongTin = new javax.swing.JTextField();
@@ -122,7 +123,6 @@ public class Home extends javax.swing.JFrame {
         jLabel55 = new javax.swing.JLabel();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
-        jLabel42 = new javax.swing.JLabel();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
@@ -178,6 +178,10 @@ public class Home extends javax.swing.JFrame {
         jButton21 = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
         jLabel105 = new javax.swing.JLabel();
+        jButton22 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        btn_Chuyentien = new javax.swing.JButton();
+        jLabel42 = new javax.swing.JLabel();
 
         List_ThongTinSearch.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -227,7 +231,7 @@ public class Home extends javax.swing.JFrame {
                 btn_languageActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_language, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 58, -1, -1));
+        jPanel2.add(btn_language, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, -1, -1));
 
         btn_aboutUs.setBackground(new java.awt.Color(0, 102, 102));
         btn_aboutUs.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -241,7 +245,7 @@ public class Home extends javax.swing.JFrame {
                 btn_aboutUsActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_aboutUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(658, 38, -1, 70));
+        jPanel2.add(btn_aboutUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, -1, 70));
 
         btn_contact1.setBackground(new java.awt.Color(0, 102, 102));
         btn_contact1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -255,7 +259,7 @@ public class Home extends javax.swing.JFrame {
                 btn_contact1ActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_contact1, new org.netbeans.lib.awtextra.AbsoluteConstraints(762, 37, -1, 71));
+        jPanel2.add(btn_contact1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 40, -1, 71));
 
         btn_explore.setBackground(new java.awt.Color(0, 0, 0));
         btn_explore.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -268,35 +272,21 @@ public class Home extends javax.swing.JFrame {
                 btn_exploreActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_explore, new org.netbeans.lib.awtextra.AbsoluteConstraints(852, 38, 97, 70));
+        jPanel2.add(btn_explore, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 40, 97, 70));
 
-        btn_SignUp1.setBackground(new java.awt.Color(0, 102, 102));
-        btn_SignUp1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btn_SignUp1.setForeground(new java.awt.Color(255, 255, 255));
-        btn_SignUp1.setText("Sign Up");
-        btn_SignUp1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btn_SignUp1.setBorderPainted(false);
-        btn_SignUp1.setContentAreaFilled(false);
-        btn_SignUp1.addActionListener(new java.awt.event.ActionListener() {
+        btn_Out.setBackground(new java.awt.Color(0, 102, 102));
+        btn_Out.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_Out.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Out.setText("<-");
+        btn_Out.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_Out.setBorderPainted(false);
+        btn_Out.setContentAreaFilled(false);
+        btn_Out.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_SignUp1ActionPerformed(evt);
+                btn_OutActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_SignUp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1051, 37, -1, 73));
-
-        btn_LogIn.setBackground(new java.awt.Color(0, 102, 102));
-        btn_LogIn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btn_LogIn.setForeground(new java.awt.Color(255, 255, 255));
-        btn_LogIn.setText("Log in");
-        btn_LogIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btn_LogIn.setBorderPainted(false);
-        btn_LogIn.setContentAreaFilled(false);
-        btn_LogIn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_LogInActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btn_LogIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1135, 37, -1, 73));
+        jPanel2.add(btn_Out, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 50, -1, 50));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -557,7 +547,7 @@ public class Home extends javax.swing.JFrame {
                 btn_home1ActionPerformed(evt);
             }
         });
-        jPanel2.add(btn_home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(477, 37, -1, 71));
+        jPanel2.add(btn_home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, -1, 71));
 
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -565,6 +555,11 @@ public class Home extends javax.swing.JFrame {
         jButton1.setText("See activities");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setBorderPainted(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel6.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 130, 40));
 
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
@@ -573,7 +568,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel33.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText("Best staycation deals");
+        jLabel33.setText("DaNangTour");
         jPanel6.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/activities1.png"))); // NOI18N
@@ -589,6 +584,11 @@ public class Home extends javax.swing.JFrame {
         jButton2.setText("See activities");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setBorderPainted(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 130, 40));
 
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
@@ -602,7 +602,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 19)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel36.setText("Favourite Activities in VietNam");
+        jLabel36.setText("HaNoiTour");
         jPanel7.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/activites2.png"))); // NOI18N
@@ -617,6 +617,11 @@ public class Home extends javax.swing.JFrame {
         jButton3.setText("See activities");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.setBorderPainted(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel8.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 130, 40));
 
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
@@ -625,7 +630,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel38.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel38.setText("Discover the wow of Europe");
+        jLabel38.setText("HoChiMinh Tour");
         jPanel8.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/activites3.png"))); // NOI18N
@@ -695,6 +700,11 @@ public class Home extends javax.swing.JFrame {
 
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon_TripPlanner.png"))); // NOI18N
         jButton7.setContentAreaFilled(false);
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         jPanel12.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 70));
 
         jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -708,6 +718,11 @@ public class Home extends javax.swing.JFrame {
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon_ShareExperiences.png"))); // NOI18N
         jButton5.setContentAreaFilled(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel13.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 70, 70));
 
         jLabel46.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -780,10 +795,6 @@ public class Home extends javax.swing.JFrame {
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot 2025-04-26 001021.png"))); // NOI18N
         jButton12.setText("jButton12");
         jPanel2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 1990, 120, 150));
-
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Background_Home.png"))); // NOI18N
-        jLabel42.setText("jLabel42");
-        jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 530));
 
         jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot 2025-04-26 001035.png"))); // NOI18N
         jButton13.setText("jButton13");
@@ -1008,6 +1019,33 @@ public class Home extends javax.swing.JFrame {
         jLabel105.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Screenshot 2025-04-26 231432.png"))); // NOI18N
         jPanel2.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 3930, 1300, -1));
 
+        jButton22.setBackground(new java.awt.Color(235, 102, 43));
+        jButton22.setText("See All");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(941, 1300, 160, 40));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setText("Tour");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 980, 90, -1));
+
+        btn_Chuyentien.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_Chuyentien.setForeground(new java.awt.Color(255, 255, 255));
+        btn_Chuyentien.setText("Exchange rate");
+        btn_Chuyentien.setContentAreaFilled(false);
+        btn_Chuyentien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ChuyentienActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_Chuyentien, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 60, 160, 30));
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Background_Home.png"))); // NOI18N
+        jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 530));
+
         jScrollPane2.setViewportView(jPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1035,13 +1073,12 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRadio_CultureActionPerformed
 
-    private void btn_LogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogInActionPerformed
+    private void btn_OutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_LogInActionPerformed
-
-    private void btn_SignUp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SignUp1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_SignUp1ActionPerformed
+        Login dk = new Login();
+        dk.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btn_OutActionPerformed
 
     private void btn_exploreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_exploreActionPerformed
 
@@ -1094,6 +1131,9 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+        giaodien dk = new giaodien();
+        dk.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -1105,6 +1145,10 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        Giaodien dk = new Giaodien();
+        dk.setVisible(true);
+        this.dispose();
+        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
@@ -1191,7 +1235,7 @@ public class Home extends javax.swing.JFrame {
         // Tách chuỗi theo dấu phẩy
         String[] parts = inputText.split(",");
 
-        // Gán từng phần vào biến tương ứng, kiểm tra length tránh lỗi
+        // Gán từng phần vào biến tương ứng
         String national = (parts.length > 0) ? parts[0].trim() : "";
         String city = (parts.length > 1) ? parts[1].trim() : "";
         String placeName = (parts.length > 2) ? parts[2].trim() : "";
@@ -1210,10 +1254,66 @@ public class Home extends javax.swing.JFrame {
             category = "Unknown";
         }
 
-        // Gọi frame SearchResults với 4 tham số
-        new SearchResults(national, city, placeName, category).setVisible(true);
+        // Gọi đúng constructor 5 tham số
+        SearchResults sr = new SearchResults(national, city, placeName, category, inputText);
+        sr.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btn_SearchActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        ThongTin dk = new ThongTin();
+        dk.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        ThongTin2 dk = new ThongTin2();
+        dk.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        ThongTin3 dk = new ThongTin3();
+
+        dk.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        // TODO add your handling code here:
+        DatTour dk = new DatTour();
+
+        dk.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void btn_ChuyentienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ChuyentienActionPerformed
+        // TODO add your handling code here:
+        TienTe dk = new TienTe();
+
+        dk.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btn_ChuyentienActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        Share_Ex dk = new Share_Ex();
+
+        dk.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        
+        Trip_planner dk = new Trip_planner();
+
+        dk.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1243,9 +1343,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JRadioButton btnRadio_Culture;
     private javax.swing.JRadioButton btnRadio_Food;
     private javax.swing.JRadioButton btnRadio_Nature;
-    private javax.swing.JButton btn_LogIn;
+    private javax.swing.JButton btn_Chuyentien;
+    private javax.swing.JButton btn_Out;
     private javax.swing.JButton btn_Search;
-    private javax.swing.JButton btn_SignUp1;
     private javax.swing.JButton btn_aboutUs;
     private javax.swing.JButton btn_chuyenTrang;
     private javax.swing.JButton btn_chuyenTrang1;
@@ -1269,6 +1369,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1294,6 +1395,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;

@@ -47,8 +47,6 @@ public class Explore extends javax.swing.JFrame {
         image_SaiGon = new javax.swing.JLabel();
         btn_search = new javax.swing.JButton();
         text_nhapThongTin = new javax.swing.JTextField();
-        btn_SignUp1 = new javax.swing.JButton();
-        btn_LogIn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         jPopupMenu1.setFocusable(false);
@@ -307,34 +305,6 @@ public class Explore extends javax.swing.JFrame {
         });
         getContentPane().add(text_nhapThongTin, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 513, 772, 58));
 
-        btn_SignUp1.setBackground(new java.awt.Color(0, 102, 102));
-        btn_SignUp1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btn_SignUp1.setForeground(new java.awt.Color(255, 255, 255));
-        btn_SignUp1.setText("Sign Up");
-        btn_SignUp1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btn_SignUp1.setBorderPainted(false);
-        btn_SignUp1.setContentAreaFilled(false);
-        btn_SignUp1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_SignUp1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btn_SignUp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 50, -1, 63));
-
-        btn_LogIn.setBackground(new java.awt.Color(0, 102, 102));
-        btn_LogIn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btn_LogIn.setForeground(new java.awt.Color(255, 255, 255));
-        btn_LogIn.setText("Log in");
-        btn_LogIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btn_LogIn.setBorderPainted(false);
-        btn_LogIn.setContentAreaFilled(false);
-        btn_LogIn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_LogInActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btn_LogIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 50, -1, 63));
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Backgroud_Explore.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 700));
@@ -354,10 +324,6 @@ public class Explore extends javax.swing.JFrame {
     private void btn_aboutUsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_aboutUsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_aboutUsActionPerformed
-
-    private void btn_LogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogInActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_LogInActionPerformed
 
     private void text_nhapThongTinKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_text_nhapThongTinKeyReleased
         // TODO add your handling code here:
@@ -401,10 +367,6 @@ public class Explore extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_contact1ActionPerformed
 
-    private void btn_SignUp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SignUp1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_SignUp1ActionPerformed
-
     private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
         // TODO add your handling code here:
         Home dk = new Home();
@@ -425,8 +387,6 @@ public class Explore extends javax.swing.JFrame {
     private javax.swing.JList<String> List_ThongTinSearch;
     private javax.swing.JPanel Panel_ChuaThongTinSearch;
     private javax.swing.JLabel Ten_Logo;
-    private javax.swing.JButton btn_LogIn;
-    private javax.swing.JButton btn_SignUp1;
     private javax.swing.JButton btn_aboutUs;
     private javax.swing.JButton btn_contact1;
     private javax.swing.JButton btn_explore;
